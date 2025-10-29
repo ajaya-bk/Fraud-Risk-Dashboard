@@ -167,7 +167,7 @@ def get_summary():
             'total_transactions': 0
         }), 200
     
-# Add this endpoint to your app.py
+# 5. Clearing the transaction
 @app.route('/api/clear', methods=['POST'])
 def clear_transactions():
     try:
@@ -187,7 +187,7 @@ def clear_transactions():
         db.session.rollback()
         return jsonify({'error': str(e)}), 500 
 
-# 5. Export Endpoints
+# 6. Export Endpoints
 @app.route('/api/export/csv', methods=['GET'])
 def export_csv():
     try:
@@ -206,7 +206,7 @@ def export_pdf():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-# Test endpoint
+# 7. Test endpoint
 @app.route('/api/test', methods=['GET'])
 def test_api():
     return jsonify({
@@ -220,4 +220,5 @@ if __name__ == '__main__':
     os.makedirs('exports', exist_ok=True)
     os.makedirs('static/uploads', exist_ok=True)
     
+
     app.run(debug=True, port=5000)
