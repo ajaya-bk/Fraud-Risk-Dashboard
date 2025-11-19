@@ -27,7 +27,7 @@ def _fallback_scoring(transactions_data):
     for transaction in transactions_data:
         amount = transaction.get('amount', 0)
         
-        # Simple rules (your ML specialist will replace this)
+        # Simple rules
         if amount > 1000:
             score = 0.8
         elif amount > 500:
