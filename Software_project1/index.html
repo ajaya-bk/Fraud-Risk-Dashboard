@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fraud Risk Dashboard</title>
-    <link rel="stylesheet" href="styles.css?v=1.0.1">
-    <script src="script.js?v=1.0.1"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="styles.css">
+</head>
+
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <i class="fas fa-shield-alt"></i>
+                <img src="assets/icons/shield.png" class="icon-img big" alt="SafeSpend">
                 <span>SafeSpend</span>
             </div>
             <div class="nav-links">
@@ -39,7 +38,7 @@
         <div class="summary-cards" id="dashboard">
             <div class="card">
                 <div class="card-icon total">
-                    <i class="fas fa-receipt"></i>
+                    <img src="assets/icons/transactions.png" class="icon-img big" alt="Total Transactions">
                 </div>
                 <div class="card-content">
                     <h3 id="total-transactions">0</h3>
@@ -48,7 +47,7 @@
             </div>
             <div class="card">
                 <div class="card-icon high-risk">
-                    <i class="fas fa-exclamation-triangle"></i>
+                    <img src="assets/icons/high.png" class="icon-img big" alt="High Risk Icon">
                 </div>
                 <div class="card-content">
                     <h3 id="high-risk-count">0</h3>
@@ -57,7 +56,7 @@
             </div>
             <div class="card">
                 <div class="card-icon medium-risk">
-                    <i class="fas fa-clock"></i>
+                    <img src="assets/icons/medium.png" class="icon-img big" alt="Medium Risk Icon">
                 </div>
                 <div class="card-content">
                     <h3 id="medium-risk-count">0</h3>
@@ -66,7 +65,7 @@
             </div>
             <div class="card">
                 <div class="card-icon low-risk">
-                    <i class="fas fa-check-circle"></i>
+                    <img src="assets/icons/low.png" class="icon-img big" alt="Low Risk Icon">
                 </div>
                 <div class="card-content">
                     <h3 id="low-risk-count">0</h3>
@@ -94,11 +93,11 @@
         <!-- Upload Section -->
         <section class="upload-section" id="upload">
             <div class="upload-card">
-                <h2><i class="fas fa-cloud-upload-alt"></i> Upload Transactions</h2>
+                <h2><img src="assets/icons/upload.png" class="icon-img big" alt="upload file"> Upload Transactions</h2>
                 <p>Upload a CSV file to analyze transaction fraud risks</p>
                 
                 <div class="upload-area" id="uploadArea">
-                    <i class="fas fa-file-csv upload-icon"></i>
+                    <img src="assets/icons/csv.png" class="icon-img big" alt="upload CSV">
                     <h4>Drop your CSV file here or click to browse</h4>
                     <p>Supports: .csv files with transaction data</p>
                     <input type="file" id="fileInput" accept=".csv" hidden>
@@ -123,7 +122,7 @@
                         <p><strong>Clear existing data before upload</strong></p>
                     </label>
                     <button class="btn btn-warning" onclick="clearAllData()">
-                        <i class="fas fa-trash"></i> Clear All Data
+                        <img src="assets/icons/trash.png" class="icon-img" alt="clear data"> Clear All Data
                     </button>
                 </div>
             </div>
@@ -135,10 +134,10 @@
                 <h2>Transaction Details</h2>
                 <div class="export-buttons">
                     <button class="btn btn-outline" onclick="exportCSV()">
-                        <i class="fas fa-download"></i> Export CSV
+                        <img src="assets/icons/copy.png" class="icon-img" alt="download"> Export CSV
                     </button>
                     <button class="btn btn-outline" onclick="exportHTML()">
-                        <i class="fas fa-file-alt"></i> Export Report
+                        <img src="assets/icons/export.png" class="icon-img" alt="export"> Export Report
                     </button>
                 </div>
             </div>
@@ -197,5 +196,4 @@
 
     <script src="script.js"></script>
 </body>
-
 </html>
